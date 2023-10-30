@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7476904381640631391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.012941748
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.012941754
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.012941751
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0063500046
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0008399987
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012129999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6380009
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.08561867
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7643458
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.037413415
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10.551
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -93.035
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 99.747
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      propertyPath: m_Name
+      value: Pickaxe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1148543840147426532}
+  m_SourcePrefab: {fileID: 100100000, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+--- !u!1 &7710766444447619342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c18aa6bef501fa1498759402c1d33aa1, type: 3}
+  m_PrefabInstance: {fileID: 7476904381640631391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1148543840147426532
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7710766444447619342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 7e0043553097dc34e867f52b292bb164, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
