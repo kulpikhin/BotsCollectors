@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class BotCollectorMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    private Transform _target;
+    private Vector3 _target;
     private Animator _animator;
     private bool _isMoving;
 
@@ -15,9 +13,9 @@ public class BotCollectorMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void StartMove(Transform target)
+    public void StartMove(Vector3 target)
     {
-        _target = target.transform;
+        _target = target;
         _isMoving = true;
         _animator.SetBool(BotsAnimatorData.Params.IsMove, _isMoving);
         StartCoroutine(Move());
@@ -35,7 +33,7 @@ public class BotCollectorMovement : MonoBehaviour
         while (_isMoving)
         {
             transform.LookAt(_target);
-            transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
             yield return null;
         }
     }

@@ -1,31 +1,42 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TowerScaner : MonoBehaviour
 {
-    [SerializeField] private MineralSpawner _mineralSpawner;
-
-    private TowerControllBots _botController;
+    private MineralSpawner _mineralSpawner;
+    private TowerControllBots _towerBotController;
+    public List<TowerControllBots> _towers;
+    public int _currentBuildIndex;
 
     private void Awake()
     {
-        _botController = GetComponent<TowerControllBots>();
-    }
-
-    private void SetMineralTarget(Mineral mineral)
-    {
-        _botController.TrySendBot(mineral);
+        _currentBuildIndex = 0;
+        _towers = new List<TowerControllBots>();
     }
 
     private void OnEnable()
     {
-        _mineralSpawner.MineralSpawn += SetMineralTarget;
+        _towerBotController = GetComponent<TowerControllBots>();
+        _mineralSpawner = FindAnyObjectByType<MineralSpawner>();
+        _mineralSpawner.MineralSpawn += SelectTower;
     }
 
     private void OnDisable()
     {
-        _mineralSpawner.MineralSpawn -= SetMineralTarget;
+        _mineralSpawner.MineralSpawn -= SelectTower;
+    }
+
+    public void AddTower(TowerControllBots tower)
+    {
+        _towers.Add(tower);
+    }
+
+    private void SelectTower(Mineral mineral)
+    {
+        _towers[_currentBuildIndex].TrySendBot(mineral);
+        _currentBuildIndex++;
+
+        if (_currentBuildIndex >= _towers.Count)
+            _currentBuildIndex = 0;
     }
 }

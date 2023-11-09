@@ -19,7 +19,7 @@ public class MineralSpawner : MonoBehaviour
     private void Awake()
     {
         _isSpawning = true;
-        _spawnTime = 4;
+        _spawnTime = 1;
     }
 
     private void Start()

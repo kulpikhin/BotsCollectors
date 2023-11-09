@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Mineral : MonoBehaviour
 {
     public UnityAction<GameObject> Destroyed;
+
     private int _health;
     private int _currentHealth;
 
